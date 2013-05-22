@@ -18,6 +18,9 @@ summary, time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+a img {
+    border:0;
+}
 
 ol, ul {
 	list-style: none;
@@ -35,17 +38,14 @@ table {
 }
 /* === End of CSS RESET === */
 
-a, a:visited {
-	color:#fff;
-	text-decoration: underline;
-	padding: 0 2px;
-}
+
 
 
 .clearfix:after,
 .menu:after,
 .fields-list:after,
-.columns:after {
+.columns:after,
+.thumbnails-list:after {
     content: ".";
     display: block;
     height: 0;
