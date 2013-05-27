@@ -17,11 +17,14 @@ body, html {
     background: #fff;  /* это цвет фона для контента */
     padding: 17px 0;
     position: relative;
-    background-size: cover auto;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-.screen__inner {
-    padding: 0 17px;
+.screen__inner {  
     position: relative;
+}
+.screen_home-page .screen__inner {
+    margin: 0 17px;
 }
 
 /* layout > */
@@ -55,6 +58,8 @@ body, html {
     display: block;
     text-decoration: none;
     padding: 0;
+    position: relative;
+    cursor: pointer;
 }
 
 .thumbnail__image {
@@ -72,10 +77,20 @@ body, html {
     padding: 0;
     width: 20%;
     float: left;
+    position: relative;
 }
 
 .thumbnails-list__item .thumbnail {
     margin: 2px 0 0 2px; /* это отступы между превьюшками сверху справа снизу слева */
+}
+.thumbnails-list__item_visited .thumbnail:after {
+    background: url(../images/bg/visited-pattern.png) repeat;
+    content:"";
+    position: absolute;
+    height: 100%;
+    top:0;
+    left:0;
+    width: 100%;
 }
 
 /* thumbnails > */
@@ -85,10 +100,30 @@ body, html {
 
 /* nav < */
 .nav {
-
+    
 }
 
+
+
 /* nav > */
+
+/* work page < */
+
+.thumbnail_single-work {
+    height: 100%;
+    width: 100%;
+}
+.thumbnail_single-work .thumbnail__image {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;    
+}
+/* work page > */
+
+
+
+
 
 /* icons <  */
 .ico {
@@ -180,8 +215,8 @@ label {
 
 @media screen and (max-width : 319px) {
 
-    .screen__inner {
-	padding: 0 5px;
+    .screen_home-page .screen__inner  {
+	margin: 0 5px;
     }
 
     .thumbnails-list__item {
@@ -196,8 +231,8 @@ label {
 and (min-width : 320px)
 and (max-width : 479px) {
 
-    .screen__inner {
-	padding: 0 17px;
+    .screen_home-page .screen__inner  {
+	margin: 0 17px;
     }
 
     .thumbnails-list__item {
@@ -212,8 +247,8 @@ and (max-width : 479px) {
 and (min-width : 480px)
 and (max-width : 719px) {
 
-    .screen__inner {
-	padding: 0 17px;
+    .screen_home-page .screen__inner  {
+	margin: 0 17px;
     }
 
     .thumbnails-list__item {
@@ -225,8 +260,8 @@ and (max-width : 719px) {
 and (min-width : 720px)
 and (max-width : 767px) {
 
-    .screen__inner {
-	padding: 0 9px;
+    .screen_home-page .screen__inner  {
+	margin: 0 9px;
     }
 
     .thumbnails-list__item {
