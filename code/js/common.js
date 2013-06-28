@@ -1,6 +1,6 @@
 $( document ).ready( function() {
     FrameSize();
-    WorkImageSize();
+   
 
     $ ( '.screen' ).mCustomScrollbar( {
 	mouseWheel:true,
@@ -17,7 +17,7 @@ $( document ).ready( function() {
 
 $( window ).resize( function() {
     FrameSize();
-    WorkImageSize();
+   
 } );
 
 
@@ -27,6 +27,7 @@ function FrameSize() {
     iFrameBorderBottomHeight = $ ( '.frame' ).css( 'padding-bottom' ).replace('px','');
     ScreenSizeHeight =  iWindowHeight - iFrameBorderTopHeight - iFrameBorderBottomHeight;
     $ ( '.screen' ).height ( ScreenSizeHeight  - 34 );
+    $ ( '.panel' ).height ( ScreenSizeHeight  - 34 );
     $( '.thumbnail_single-work' ).height ( ScreenSizeHeight  - 34 );
     
 }
