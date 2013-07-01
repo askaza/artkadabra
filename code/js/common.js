@@ -1,6 +1,6 @@
 $( document ).ready( function() {
     FrameSize();
-   
+
 
     $ ( '.screen' ).mCustomScrollbar( {
 	mouseWheel:true,
@@ -13,11 +13,13 @@ $( document ).ready( function() {
 	}
     } );
 
+    $('textarea').autosize();
+
 } );
 
 $( window ).resize( function() {
     FrameSize();
-   
+
 } );
 
 
@@ -26,12 +28,19 @@ function FrameSize() {
     iFrameBorderTopHeight = $ ( '.frame' ).css( 'padding-top' ).replace('px','');
     iFrameBorderBottomHeight = $ ( '.frame' ).css( 'padding-bottom' ).replace('px','');
     ScreenSizeHeight =  iWindowHeight - iFrameBorderTopHeight - iFrameBorderBottomHeight;
-    $ ( '.screen' ).height ( ScreenSizeHeight  - 34 );
+
+    $ ( '.screen, .screen__inner' ).height ( ScreenSizeHeight  - 34 );
+
     $ ( '.panel' ).height ( ScreenSizeHeight  - 34 );
-    $( '.thumbnail_single-work' ).height ( ScreenSizeHeight  - 34 );
+
+    var navHeight =  $( '.nav' ).height();
+    $( '.nav' ).css ('margin-top', - (navHeight /2 ));
+
 
 }
 
-function  WorkImageSize() {
 
-}
+
+
+
+
