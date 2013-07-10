@@ -1,0 +1,132 @@
+
+/* nav < */
+
+.likes {
+    background: #282828;
+    position: absolute;
+    right: 79px;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.likes__item {
+    display: inline-block;
+    vertical-align: top;
+    height: 32px;
+    width: 32px;
+}
+.likes__item .ico {
+    opacity: 0;
+}
+.nav__item_dropdown ul {
+    width: 0;
+}
+.nav__item_dropdown:hover ul {
+    transition: width 2s;
+    -webkit-transition: width 2s; /* Safari */
+    width: 176px;
+}
+.nav__item_dropdown:hover .likes__item .ico  {
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; /* Safari */
+    opacity: 1;
+}
+
+/* nav > */
+
+/* .promo-place < */
+
+
+.promo-place img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+/* .promo-place > */
+
+/* thumbnails < */
+
+.thumbnail {
+    display: block;
+    text-decoration: none;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.thumbnail__image {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.thumbnails-list {
+    margin: 0 0 0 -2px;
+    padding: 0;
+}
+.thumbnails-list__item {
+    list-style: none;
+    padding: 0;
+    width: 20%;
+    float: left;
+    position: relative;
+}
+
+.thumbnails-list__item .thumbnail {
+    margin: 2px 0 0 2px; /* это отступы между превьюшками сверху справа снизу слева */
+}
+.thumbnails-list__item_visited .thumbnail:after {
+    background: url(../images/bg/visited-pattern.png) repeat;
+    content:"";
+    position: absolute;
+    height: 100%;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
+/* thumbnails > */
+
+
+/* work page < */
+
+.thumbnail_single-work {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.thumbnail_single-work .thumbnail__image {
+    height: auto;
+    width: auto;
+    top:0;
+    left:0;
+
+    z-index: 10;
+}
+/* work page > */
+
+
+/* form styles < */
+
+.contacts {
+   position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: -127px;
+    margin-top:-120px;
+    width: 254px;
+}
+
+.success-send {
+    background: #fff url(../images/bg/icons.png) no-repeat 0 -146px; width: 64px; height: 49px;
+    border-color: #fff;
+    border-style: solid;
+    border-width:88px 79px;
+    display: block;
+
+}
+/* form styles > */
+
+

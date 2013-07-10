@@ -1,0 +1,160 @@
+
+/* nav < */
+
+.likes {
+    background: #282828;
+    position: absolute;
+    right: 79px;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.likes__item {
+    display: inline-block;
+    vertical-align: top;
+    height: 32px;
+    width: 32px;
+}
+.likes__item .ico {
+    opacity: 0;
+}
+.nav__item_dropdown ul {
+    width: 0;
+}
+.nav__item_dropdown:hover ul {
+    transition: width 2s;
+    -webkit-transition: width 2s; /* Safari */
+    width: 176px;
+}
+.nav__item_dropdown:hover .likes__item .ico  {
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; /* Safari */
+    opacity: 1;
+}
+
+/* nav > */
+
+/* .promo-place < */
+
+
+.promo-place img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+/* .promo-place > */
+
+/* thumbnails < */
+
+.thumbnail {
+    display: block;
+    text-decoration: none;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.thumbnail__image {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.thumbnails-list {
+    margin: 0 0 0 -2px;
+    padding: 0;
+}
+.thumbnails-list__item {
+    list-style: none;
+    padding: 0;
+    width: 20%;
+    float: left;
+    position: relative;
+}
+
+.thumbnails-list__item .thumbnail {
+    margin: 2px 0 0 2px; /* это отступы между превьюшками сверху справа снизу слева */
+}
+.thumbnails-list__item_visited .thumbnail:after {
+    background: url(../images/bg/visited-pattern.png) repeat;
+    content:"";
+    position: absolute;
+    height: 100%;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
+/* thumbnails > */
+
+
+/* work page < */
+
+.thumbnail_single-work {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.thumbnail_single-work .thumbnail__image {
+    height: auto;
+    width: auto;
+    top:0;
+    left:0;
+
+    z-index: 10;
+}
+/* work page > */
+
+
+/* form styles < */
+
+.works-form {   
+    padding-top: 45px;
+    margin: 0 auto;   
+    width: 410px;
+}
+
+.works-form-list__item {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.work-actions {
+    float: left;
+}
+.work-actions__item {
+    float: left;
+    margin-right: 15px;
+}
+.work-actions__item a {
+    display: table-cell;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.work-number {
+    float: left;
+    width: 25px;
+    margin-left: 22px;
+    text-align: left;
+    line-height: 32px;
+    position: relative;
+}
+.work-number:before {
+    content: "#";
+    position: absolute;
+    top:0;
+    left:-9px;
+}
+
+.works-form  .field_text {   
+    padding: 7px 10px 5px 9px;    
+    width: 199px;
+}
+/* form styles > */
+
+
