@@ -92,7 +92,7 @@ body, html {
 .logo {
     position: absolute;
     top:-5px;
-    right: 20px;
+    right: 23px;
     padding: 6px 0;
     text-align: center;
     width: 32px;
@@ -102,7 +102,7 @@ body, html {
 .email {
     position: absolute;
     bottom:-5px;
-    right: 20px;
+    right: 23px;
     padding: 6px 0;
     text-align: center;
     width: 32px;
@@ -175,6 +175,7 @@ body, html {
 .ico_pinterest{ background-position: 0 -417px; width: 15px; height: 15px; }
 .ico_tw {background-position: 0 -436px; width: 15px; height: 15px; }
 .ico_ready {background-position: -20px 0; width: 15px; height: 15px; }
+.ico_plus {background-position: -21px -17px; width: 11px; height: 11px;}
 
 .panel a:hover .ico,
 .panel .ico:hover,
@@ -213,28 +214,33 @@ textarea {
     position: relative;
 }
 
-.label {
-
+.label .ico {
+    position: absolute;
+    z-index: 2;
 }
 .label .ico_user {
-    position: absolute;
     top:6px;
     left:7px;
 }
 .label .ico_mail-dark {
-    position: absolute;
     top:8px;
     left:5px;
 }
 .label .ico_quote-up {
-    position: absolute;
     top:8px;
     left:6px;
 }
 .label .ico_quote-down {
-    position: absolute;
     bottom:8px;
     right:6px;
+}
+.label .ico_edit {
+    top:9px;
+    left:7px;
+}
+.label .ico_upload {
+    top:8px;
+    left:7px;
 }
 .field_text {
     background: none;
@@ -272,6 +278,35 @@ textarea {
     cursor: pointer;
 }
 
+.form-button {
+    background: none;
+    border:1px solid #787878;
+    position: relative;
+    height: 30px;
+    z-index: 10;
+}
+.form-button__input {
+    background: none;
+    border:0;
+    padding:5px 10px 5px 10px;
+    height: 30px;
+    text-align: left;
+    cursor: pointer;
+    width:233px;
+}
+.form-button_icon .form-button__input {
+    padding:5px 10px 5px 28px;
+    width:215px;
+}
+
+.form-button_icon .ico {
+    position: absolute;
+    z-index: 1;
+}
+.form-button_icon .ico_plus {
+    left:7px;
+    top:8px;
+}
 
 /* form styles > */
 
@@ -383,7 +418,7 @@ and (min-width : 1920px) {
 .menu:after,
 .fields-list:after,
 .columns:after,
-.thumbnails-list:after, 
+.thumbnails-list:after,
 .works-form-list__item:after {
     content: ".";
     display: block;
