@@ -26,7 +26,17 @@
 	<script type="text/javascript" src="../front/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="../front/js/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="../front/js/jquery.mCustomScrollbar.js"></script>	
+        <script type="text/javascript" src="js/jquery.fileinput.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
+        
+        <script type="text/javascript" >
+            $(function(){
+                $('.customfile-container input').each( function() {
+                  $(this).customFileInput();  
+                });
+            });
+            
+        </script>
 
     </head>
     <body>
@@ -35,7 +45,8 @@
 		<h1 class="logo"><i class="ico ico_logo"></i></h1>
 		<a href="#" class="link link_btn email" title="we@artkadabra.ru"><i class="ico ico_mail"></i></a>
                 <ul class="nav">
-		    <li class="nav__item"><a href="#"><i class="ico ico_add"></i></a></li>		    
+		    <li class="nav__item"><a href="#"><i class="ico ico_close"></i></a></li>	
+                    <li class="nav__item"><a href="#"><i class="ico ico_ready"></i></a></li>
 		</ul>
 	    </div> <!-- /.panel -->
 
@@ -43,63 +54,85 @@
 		<div class="screen__inner">
 		    <div class="works-form">
 			<form action="#" method="get" class="form">
-			    <ul class="works-form-list">
-				<li class="works-form-list__item">
-				    <ul class="work-actions">
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_close-gray"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-up"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-down"></i></a></li>
-                                    </ul>            
-                                    <span class="work-number">6</span>
-				    <input type="text" class="field field_text" value="Заголовок работы" />
-				</li>		
-                                <li class="works-form-list__item">
-				    <ul class="work-actions">
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_close-gray"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-up"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-down"></i></a></li>
-                                    </ul>            
-                                    <span class="work-number">5</span>
-				    <input type="text" class="field field_text" value="Макеты для работы" />
-				</li>
-                                <li class="works-form-list__item">
-				    <ul class="work-actions">
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_close-gray"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-up"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-down"></i></a></li>
-                                    </ul>            
-                                    <span class="work-number">4</span>
-				    <input type="text" class="field field_text" value="Заголовок третьей работы" />
-				</li>
-                                <li class="works-form-list__item">
-				    <ul class="work-actions">
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_close-gray"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-up"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-down"></i></a></li>
-                                    </ul>            
-                                    <span class="work-number">3</span>
-				    <input type="text" class="field field_text" value="Заголовок работы" />
-				</li>
-                                <li class="works-form-list__item">
-				    <ul class="work-actions">
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_close-gray"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-up"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-down"></i></a></li>
-                                    </ul>            
-                                    <span class="work-number">2</span>
-				    <input type="text" class="field field_text" value="Работа" />
-				</li>
-                                <li class="works-form-list__item">
-				    <ul class="work-actions">
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_close-gray"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-up"></i></a></li>
-                                        <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-down"></i></a></li>
-                                    </ul>            
-                                    <span class="work-number">1</span>
-				    <input type="text" class="field field_text" value="Заголовок" />
-				</li>
-			    </ul>			    
-			</form>
+                            <fieldset class="no-sort">
+                                
+                                    <ul class="works-form-list">
+                                        <li class="works-form-list__item">                                           
+                                            <input type="text" class="field field_text" value="Заголовок работы" />
+                                        </li>	
+                                        <li class="work-form-list__item">
+                                            <div class="customfile-container">                                                
+                                                <input type="file" id="file1" name="myfiles" />
+                                            </div>
+                                            <div class="image-preview">
+                                                <a href="#" class="view-full-size">
+                                                    <img src="../front/images/previews/10.jpg" />
+                                                    <i class="ico ico_loup"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                                <fieldset>
+                                    <ul class="works-form-list">
+                                        <li class="works-form-list__item">
+                                            <ul class="work-actions">
+                                                <li class="work-actions__item"><a href="#"><i class="ico ico_close-gray"></i></a></li>
+                                                <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-up"></i></a></li>
+                                                <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-down"></i></a></li>
+                                            </ul>            
+                                            <span class="work-number">2</span>
+                                            <div class="customfile-container">                                                
+                                                <input type="file" id="file2" name="myfiles" />
+                                            </div>
+                                            <div class="image-preview">
+                                                <a href="#" class="view-full-size">
+                                                    <img src="../front/images/previews/10.jpg" />
+                                                    <i class="ico ico_loup"></i>
+                                                </a>
+                                            </div>
+                                        </li>	
+                                        <li class="works-form-list__item no-sort">                                           
+                                            <div class="customfile-container">                                                
+                                                <input type="file" id="file3" name="myfiles" />
+                                            </div>                                            
+                                        </li>
+                                         <li class="works-form-list__item no-sort">
+                                             <label class="label"><i class="ico ico_edit"></i></label>
+                                            <input type="text" class="field field_text field_text_color" value="#232323" />
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            <fieldset>
+                                <ul class="works-form-list">
+                                    <li class="works-form-list__item">
+                                        <ul class="work-actions">
+                                            <li class="work-actions__item"><a href="#"><i class="ico ico_close-gray"></i></a></li>
+                                            <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-up"></i></a></li>
+                                            <li class="work-actions__item"><a href="#"><i class="ico ico_arrow-down"></i></a></li>
+                                        </ul>            
+                                        <span class="work-number">1</span>
+                                        <div class="customfile-container">                                                
+                                            <input type="file" id="file4" name="myfiles" />
+                                        </div>                                            
+                                    </li>	
+                                    <li class="works-form-list__item no-sort">                                           
+                                        <div class="customfile-container">                                                
+                                            <input type="file" id="file5" name="myfiles" />
+                                        </div>                                            
+                                    </li>
+                                    <li class="works-form-list__item no-sort">
+                                             <label class="label"><i class="ico ico_edit"></i></label>
+                                            <input type="text" class="field field_text field_text_color" value="#232323" />
+                                        </li>
+                                </ul>
+                            </fieldset>
+                            
+                             <fieldset>                                                                  
+                                  <input type="submit" class="field field_btn field_btn" value="Добавить" />                                 
+                            </fieldset>
+                            
+                        </form>
 		    </div>
 		</div>
 	    </div> <!-- /.screen -->
