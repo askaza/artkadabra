@@ -110,6 +110,12 @@
 
 /* form styles < */
 
+.label .ico {
+    color:#787878;
+    position: absolute;
+    z-index: 2;
+}
+
 .contacts {
    position: absolute;
     top:50%;
@@ -130,9 +136,10 @@
 }
 .success-send:before {
   font-family: 'FontAwesome';
-  content: "\f0e0";
   color:#434343;
   font-size: 40px;
+  content: "\f00c";
+
 }
 /* form styles > */
 
