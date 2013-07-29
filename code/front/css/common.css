@@ -152,7 +152,7 @@ body, html {
    font-family: 'FontAwesome';
     display: inline-block;
     color: #fff;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 .ico_logo { background-position: 0 0; width: 16px; height: 16px; }
@@ -274,32 +274,21 @@ textarea {
 .label .ico {
     color:#b1b1b1;
     position: absolute;
+    width: 25px;
+    text-align: center;
+    line-height: 30px;
     z-index: 2;
 }
-.label .ico_user {
-    top:6px;
-    left:7px;
-}
-.label .ico_mail-dark {
-    top:8px;
-    left:5px;
-}
+
 .label .ico_quote-up {
-    top:8px;
-    left:6px;
+    top:0;
+    left:0;
 }
 .label .ico_quote-down {
-    bottom:8px;
-    right:6px;
+    bottom:0;
+    right:0;
 }
-.label .ico_edit {
-    top:9px;
-    left:7px;
-}
-.label .ico_upload {
-    top:8px;
-    left:7px;
-}
+
 .field_text {
     background: none;
     height:18px;
