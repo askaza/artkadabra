@@ -145,36 +145,91 @@ body, html {
 
 /* icons < */
 
+
 .ico {
-    background: url(../images/bg/icons.png) no-repeat 0 0;
+   font-family: 'FontAwesome';
     display: inline-block;
+    color: #fff;
+    font-size: 1em;
 }
 
 .ico_logo { background-position: 0 0; width: 16px; height: 16px; }
-.ico_fb { background-position: 0 -20px; width: 15px; height: 15px; }
-.ico_like{ background-position: 0 -39px; width: 18px; height: 15px; }
-.ico_quote-up{ background-position: 0 -58px; width: 16px; height: 14px; }
-.ico_quote-down{ background-position: 0 -76px; width: 16px; height: 14px; }
-.ico_mail-dark{ background-position: 0 -94px; width: 18px; height: 14px; }
-.ico_user { background-position: 0 -112px; width: 14px; height: 15px; }
-.ico_send-form{ background-position: 0 -131px; width: 16px; height: 11px; }
-.ico_complete-send{ background-position: 0 -146px; width: 64px; height: 49px; }
-.ico_close-gray{ background-position: 0 -199px; width: 9px; height: 9px; }
-.ico_arrow-up{ background-position: 0 -212px; width: 11px; height: 11px; }
-.ico_mail{ background-position: 0 -227px; width: 17px; height: 14px; }
-.ico_arrow-down{ background-position: 0 -245px; width: 11px; height: 11px; }
-.ico_loup{ background-position: 0 -260px; width: 13px; height: 12px; }
-.ico_upload { background-position: 0 -276px; width: 13px; height: 11px; }
-.ico_edit{ background-position: 0 -291px; width: 12px; height: 12px; }
-.ico_add{ background-position: 0 -307px; width: 13px; height: 14px; }
-.ico_close{ background-position: 0 -325px; width: 12px; height: 12px; }
-.ico_next{ background-position: 0 -341px; width: 10px; height: 15px; }
-.ico_prev { background-position: 0 -360px; width: 10px; height: 15px; }
-.ico_like{ background-position: 0 -379px; width: 18px; height: 15px; }
-.ico_vk { background-position: 0 -398px; width: 15px; height: 15px; }
-.ico_pinterest{ background-position: 0 -417px; width: 15px; height: 15px; }
-.ico_tw {background-position: 0 -436px; width: 15px; height: 15px; }
-.ico_ready {background-position: -20px 0; width: 15px; height: 15px; }
+
+
+
+.ico_like:before {
+  content: "\f004";
+}
+
+.ico_fb:before {
+  content: "\f082";
+}
+
+.ico_vk:before {
+  content: "\f189";
+}
+.ico_pinterest:before {
+  content: "\f0d3";
+}
+.ico_tw:before {
+  content: "\f081";
+}
+
+.ico_quote-up:before {
+  content: "\f10d";
+}
+.ico_quote-down:before {
+  content: "\f10e";
+}
+
+.ico_user:before {
+  content: "\f007";
+}
+.ico_send-form:before {
+  content: "\f0e0";
+}
+.ico_complete-send:before {
+  content: "\f0e0";
+}
+.ico_mail:before {
+  content: "\f003";
+}
+.ico_mail-dark {
+    content: "\f003";
+}
+.ico_arrow-up:before {
+  content: "\f062";
+}
+.ico_arrow-down:before {
+  content: "\f063";
+}
+.ico_loup:before {
+  content: "\f00e";
+}
+.ico_upload:before {
+  content: "\f093";
+}
+.ico_edit:before {
+  content: "\f040";
+}
+.ico_add:before {
+  content: "\f067";
+}
+.ico_close:before {
+  content: "\f00d";
+}
+.ico_close-gray:before {
+  content: "\f00d";
+}
+
+.ico_next:before {
+  content: "\f054";
+}
+.ico_prev:before {
+  content: "\f053";
+}
+
+
 
 .panel a:hover .ico,
 .panel .ico:hover,
@@ -274,110 +329,6 @@ textarea {
 
 
 /* form styles > */
-
-/* media queries < */
-
-@media screen and (max-width : 319px) {
-
-    .screen_home-page .screen__inner  {
-	margin: 0 5px;
-    }
-
-    .thumbnails-list__item {
-	width: 100%;
-    }
-    .thumbnails-list__item .thumbnail {
-	margin: 2px 0 0 0;
-    }
-}
-
-@media screen
-and (min-width : 320px)
-and (max-width : 479px) {
-
-    .screen_home-page .screen__inner  {
-	margin: 0 17px;
-    }
-
-    .thumbnails-list__item {
-	width: 100%;
-    }
-    .thumbnails-list__item .thumbnail {
-	margin: 2px 0 0 0;
-    }
-}
-
-@media screen
-and (min-width : 480px)
-and (max-width : 719px) {
-
-    .screen_home-page .screen__inner  {
-	margin: 0 17px;
-    }
-
-    .thumbnails-list__item {
-	width: 50%;
-    }
-}
-
-@media screen
-and (min-width : 720px)
-and (max-width : 767px) {
-
-    .screen_home-page .screen__inner  {
-	margin: 0 9px;
-    }
-
-    .thumbnails-list__item {
-	width: 50%;
-    }
-}
-
-@media screen
-and (min-width : 768px)
-and (max-width : 1023px) {
-
-    .thumbnails-list__item {
-	width: 33.3333333333333333%;
-    }
-}
-
-@media screen
-and (min-width : 1023px)
-and (max-width : 1199px) {
-
-    .thumbnails-list__item {
-	width: 25%;
-    }
-}
-@media only screen
-and (min-width : 1200px)
-and (max-width : 1599px) {
-
-    .thumbnails-list__item {
-	width: 20%;
-    }
-}
-
-@media screen
-and (min-width : 1600px)
-and (max-width : 1919px) {
-
-    .thumbnails-list__item {
-	width: 16.666666666%;
-    }
-}
-@media screen
-and (min-width : 1920px) {
-
-    .thumbnails-list__item {
-	width: 14.2857142857%;
-    }
-}
-
-
-/* media queries > */
-
 
 .clearfix:after,
 .menu:after,

@@ -120,12 +120,19 @@
 }
 
 .success-send {
-    background: #fff url(../images/bg/icons.png) no-repeat 0 -146px; width: 64px; height: 49px;
+    
+    background: #fff;
     border-color: #fff;
     border-style: solid;
     border-width:88px 79px;
     display: block;
 
+}
+.success-send:before {
+  font-family: 'FontAwesome';
+  content: "\f0e0";
+  color:#434343;
+  font-size: 40px;
 }
 /* form styles > */
 
