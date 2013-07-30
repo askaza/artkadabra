@@ -62,7 +62,7 @@
 }
 
 .thumbnails-list {
-    margin: 0 0 0 -2px;
+    margin: 0 0 0 -2px; /* на величину отступа справа надо сдвигать влево весь список */
     padding: 0;
 }
 .thumbnails-list__item {

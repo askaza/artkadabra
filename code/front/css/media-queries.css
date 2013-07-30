@@ -97,6 +97,12 @@ and (min-width : 1920px) {
 	width: 14.2857142857%;
     }
 }
+@media screen
+and (min-width : 2000px) {
 
+    .thumbnails-list__item {
+	width: 12%;
+    }
+}
 
 /* media queries > */
